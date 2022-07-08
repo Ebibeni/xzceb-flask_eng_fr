@@ -26,3 +26,11 @@ def englishToFrench(englishText):
         text='englishText',
         model_id='en-fr').get_result()
     return frenchText
+
+def frenchToEnglish(frenchText):
+    #write the code here
+    language_translator.set_service_url('{url}')
+    englishText = language_translator.translate(
+        text='frenchText',
+        model_id='fr-en').get_result()
+    return englishText
